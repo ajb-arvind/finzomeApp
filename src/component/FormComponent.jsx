@@ -44,7 +44,7 @@ const FormComponent = ({ updateDetails }) => {
           .min(9, 'Must be length 9 or greater')
           .required('Required'),
 
-        weekday: Yup.array().required('Required'),
+        weekday: Yup.array().min(1, 'Required'),
         gender: Yup.string().required('Required'),
         dob: Yup.date()
           .required('Required')
